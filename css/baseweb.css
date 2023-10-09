@@ -1,0 +1,339 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,400&display=swap');
+
+/* Table of Contents
+     1. General
+        -Tables
+     2. Backgrounds
+     3. Typography
+     4. Images
+     5. Components (buttons, cards etc.)
+     6. Custom responsive styles
+     7. Animations/Transition/Transforms
+     8. Admin Area
+
+*/
+
+/*     GENERAL    */
+.navbar-brand-img {
+    width: 5%;
+}
+.header-img{
+    opacity:1;
+    height:80%;
+}
+header{
+    padding-top: 2.5rem;
+    padding-bottom: 6rem;
+}
+/* Style the navbar */
+#mainNav {
+    overflow: hidden;
+    z-index: 5;
+}
+.navBranding {
+    background-image: url('../img/Logos/Transparent-BG/GIAS-1080-540-WHITE.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 8rem;
+    height: 4rem;
+    z-index: 6;
+}
+
+/* Navbar links */
+#mainNav a {
+    display: block;
+    padding: 14px;
+    text-decoration: none;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition-duration: ease-in-out 2sec;
+    transition-property: all;
+}
+.sticky + .content {
+    padding-top: 10rem;
+    transition-duration: ease-in-out 2sec;
+    transition-property: all;
+}
+
+.content {
+    padding-bottom: 50px;
+}
+#services{
+    border-top:black solid 2px;
+    border-bottom:black solid 2px;
+}
+/*     Tables    */
+
+.w-8 {
+    width: 8%;
+}
+
+.w-14 {
+    width: 14%;
+}
+
+.w-15 {
+    width: 15%;
+}
+
+.w-35 {
+    width: 35%;
+}
+
+.w-40 {
+    width: 40%;
+}
+
+
+/*     Backgrounds    */
+.bg {
+    background-color: #112275ce;
+    border-radius: 1.5rem;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+.bgi1 {
+    background-image: url('../img/Branding-Images/2IvKhd.jpg');
+}
+
+.bg2 {
+    background-image: url('../img/Branding-Images/2IvKhd.jpg');
+    animation: fade-in ease-in-out 1s;
+    transition: ease-in-out 1s
+}
+.tag {
+    opacity: 0;
+    transition: ease-in-out all 1.5s;
+}
+
+.tag.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: ease-in-out all 1.5s;
+    z-index: -1;
+}
+/*     Typography    */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.f-size-3 {
+    font-size: 3rem;
+}
+
+/*     Images    */
+.brand-img {
+    width: 15%;
+
+}
+.fasize{
+    height:6rem;
+    width:6.25rem !important;
+}
+/*     Components (buttons, cards etc.)    */
+.btn {
+    border-radius: 10px;
+}
+
+.btns {
+    border-radius: 0px;
+}
+.card {
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0.55rem 0.55rem 1.0rem rgba(0, 0, 0, 0.8) !important;
+}
+
+.card-img-top {
+    height: 15rem;
+    width: 100%;
+}
+
+.card-body {
+    height: 15rem;
+}
+
+.card-title {
+    padding-bottom: 0.8rem !important;
+}
+
+.card:hover {
+    border-radius: 10px;
+    box-shadow: 0.55rem 0.55rem 1.0rem cornflowerblue !important;
+}
+.shadow {
+    box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.4) !important;
+}
+
+.shadow-no-hover {
+    box-shadow: 0 0.15rem 0.4rem rgba(0, 0, 0, 0.5) !important;
+}
+
+.shadow:hover {
+    box-shadow: 0 0.15rem 0.4rem rgba(0, 0, 0, 0.8) !important;
+}
+
+/*     Responsive Elements    */
+.min-vh-90 {
+    min-height: 90vh !important;
+}
+
+.bg-white-94 {
+    background-color: rgba(255, 255, 255, 0.94);
+}
+
+
+
+#informationalModal {
+    animation: fade-in ease-in-out 1s;
+    transition: ease-in-out 1s
+}
+
+.fadein {
+    animation: fade-in ease-in-out 1s;
+    transition: ease-in-out 1s
+}
+.shadow {
+    box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.4) !important;
+}
+
+.shadow-no-hover {
+    box-shadow: 0 0.15rem 0.4rem rgba(0, 0, 0, 0.5) !important;
+}
+
+.shadow:hover {
+    box-shadow: 0 0.15rem 0.4rem rgba(0, 0, 0, 0.8) !important;
+}
+
+
+
+.flex-shrink-1 {
+    flex-shrink: 1;
+}
+
+.z-index-5 {
+    z-index: 5;
+}
+
+.min-vh-90 {
+    min-height: 90vh !important;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+/* 2. Backgrounds */
+.bg-lightgray {
+    background-color: #EBEBEB;
+}
+
+.bg-motherboard-dev {
+    background-image: url("../assets/img/publicbackgrounds/bg-motherboard-dev.jpg");
+}
+
+.hover-bg-white:hover {
+    background-color: #FFF;
+}
+
+.bg-white-94 {
+    background-color: rgba(255, 255, 255, 0.94);
+}
+
+/* 3. Typography */
+
+
+/* 4. Components (buttons, cards etc.) */
+.btn {
+    border-radius: 0px;
+}
+
+
+
+.btn-update {
+    color: #FFF;
+    background-color: #cfb300;
+    border-color: #cfb300;
+}
+
+    .btn-update:hover {
+        color: #FFF;
+        background-color: #a68f00;
+        border-color: #a68f00;
+    }
+
+.admin-index-thumbnail-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.admin-crud-form-thumbnail-image {
+    display: block;
+    width: 50%;
+}
+
+.list-group {
+    border-radius: 0px;
+}
+
+/* 5. Custom responsive styles */
+@media (max-width: 992px) {
+    .md-and-smaller-my-3 {
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .bg-motherboard-dev {
+        background-image: url("../assets/img/publicbackgrounds/bg-motherboard.jpg");
+    }
+
+    .md-and-smaller-d-none {
+        display: none !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .md-f-size-1-5 {
+        font-size: 1.5rem;
+    }
+}
+
+/*     Admin Area    */
+.admin-area-main {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100vh;
+    max-height: 100vh;
+    overflow-x: auto;
+    overflow-y: auto;
+    background-color: #404040;
+}
+
+.admin-area-content {
+    overflow-y: scroll;
+    padding: 10vw;
+}
+
+
+
+/*     Animations/Transition/Transforms    */
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.img--size {
+    width: 414px;
+    height: 232px;
+    object-fit: contain;
+}
