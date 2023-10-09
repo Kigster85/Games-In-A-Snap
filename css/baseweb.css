@@ -133,6 +133,9 @@ body {
     height:6rem;
     width:6.25rem !important;
 }
+bgblend{
+
+}
 /*     Components (buttons, cards etc.)    */
 .btn {
     border-radius: 10px;
