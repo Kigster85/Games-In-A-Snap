@@ -1,15 +1,18 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,400&display=swap');
 
 /* Table of Contents
-     1. General
-        -Tables
-     2. Backgrounds
-     3. Typography
-     4. Images
-     5. Components (buttons, cards etc.)
-     6. Custom responsive styles
-     7. Animations/Transition/Transforms
-     8. Admin Area
+
+        1. General
+        2. Backgrounds
+        3. Typography
+        4. Images
+        5. Components (buttons, cards etc.)
+        6. Custom responsive styles
+        7. Animations/Transition/Transforms
+        8. Admin Area
+        9. LightBox
+        10. 
+    Staff Area
 
 */
 
@@ -31,14 +34,22 @@ header{
     z-index: 5;
 }
 .navBranding {
-    background-image: url('../img/Logos/Transparent-BG/GIAS-1080-540-WHITE.png');
+    /*    background-image: url('../img/Logos/Transparent-BG/GIAS-1080-540-WHITE.png');*/
+/*    background-image: url('../img/Logos/Transparent-BG/Gaming-in-a-Snap-Transparent-Blue_1.png');*/
+    background-image: url('../img/Branding-Images/GIAS Facebook Logo.png');
     background-size: cover;
     background-repeat: no-repeat;
     width: 8rem;
     height: 4rem;
     z-index: 6;
 }
+.nav-item{
+border-radius:1rem;
+}
 
+.nav-item:hover {
+animation: glowing2 1s infinite alternate ease-in-out;
+}
 /* Navbar links */
 #mainNav a {
     display: block;
@@ -49,12 +60,12 @@ header{
     position: fixed;
     top: 0;
     width: 100%;
-    transition-duration: ease-in-out 2sec;
+    transition-duration: ease-in-out 2s;
     transition-property: all;
 }
 .sticky + .content {
-    padding-top: 10rem;
-    transition-duration: ease-in-out 2sec;
+    padding-top: 16rem;
+    transition-duration: ease-in-out 2s;
     transition-property: all;
 }
 
@@ -96,7 +107,13 @@ header{
     padding: 1rem;
 }
 .bgi1 {
-    background-image: url('../img/Branding-Images/2IvKhd.jpg');
+    background-image: url('../img/branding-images/website-banner-top-fancy.png');
+    padding-top: 18rem;
+    box-sizing: content-box;
+    background-size: cover;
+    background-clip: padding-box;
+    background-origin: border-box;
+    background-position: center;
 }
 
 .bg2 {
@@ -125,16 +142,211 @@ body {
 }
 
 /*     Images    */
+.img--size {
+    width: 414px;
+    height: 232px;
+    object-fit: contain;
+}
 .brand-img {
     width: 15%;
 
 }
-.fasize{
-    height:6rem;
-    width:6.25rem !important;
+.socialiconsize {
+height: 6rem;
+width: 6.25rem !important;
 }
-bgblend{
+.galleryimg {
+    flex: 0 0 auto;
+    width: 25%;
+    padding: 0.2rem;
+    transform: scale(1);
+    transition: ease-in-out 1s;
+}
+.galleryimg:hover {
+    flex: 0 0 auto;
+    width: 25%;
+    transform: scale(1.25);
+    transition: ease-in-out 1s;
+    z-index:1;
+}
+.img-thumbnail {
+    background-color: #0e287d !important;
+}
 
+/* Start of CSS for Gallery Lightbox*/
+.hideMe {
+display: none;
+}
+.row > .column {
+    padding: 0 8px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+    float: left;
+    width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #010000cf;
+    animation: fade-in ease-in-out 0.5s;
+
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    position: absolute;
+    margin-top: 8rem;
+    top: 10px;
+    right: 15px;
+    font-size: 35px;
+    font-weight: bold;
+    z-index: 1;
+    animation: fade-in ease-in-out 0.5s;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+cursor: pointer;
+position: absolute;
+width: 3%;
+margin-top: 20rem;
+color: white;
+font-weight: bold;
+font-size: 4rem;
+transition: 0.3s ease-in-out;
+user-select: none;
+-webkit-user-select: none;
+background-color: #0e287d;
+border-radius: 0.25rem;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover{
+        background-color: white !important;
+        color: #0e287d;
+    }
+
+/* Number text (1/3 etc) */
+.numbertext {
+color: #f2f2f2;
+font-size: 18px;
+padding: 8px 12px;
+position: absolute;
+background-color: #0e287d;
+border-radius:0.25rem;
+top: 0;
+}
+
+/* Caption text */
+.caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
+
+img.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+img.hover-shadow {
+    transition: 0.3s;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/*        Start of the Staff Page          */
+.staff-card-img-top {
+    border-radius: 10rem;
+    width: 5rem;
+    height: 5rem;
+    background-color: none;
+    border: white solid 0.15rem;
+    margin: 0.25rem;
+}
+.staff-card-img-top:hover {
+    animation: glowing 1s infinite alternate;
+}
+.staff-card{
+    background:none;
+    display:inline-grid;
+    justify-items:center;
+}
+.staff-grid-align{
+    justify-items:center;
+    display:inline-grid;
+}
+.staff-card-img-top2 {
+    border-radius: 10rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: none;
+    border: white solid 0.15rem;
+    margin: 0.25rem;
+}
+
+.staff-card-img-top2:hover {
+    animation: glowing 1s infinite alternate;
+}
+.staff-card-title2{
+    font-size:1rem;
+}
+.staff-card-text2 {
+    font-size: 0.80rem;
 }
 /*     Components (buttons, cards etc.)    */
 .btn {
@@ -143,29 +355,6 @@ bgblend{
 
 .btns {
     border-radius: 0px;
-}
-.card {
-    border-radius: 10px;
-    object-fit: cover;
-    box-shadow: 0.55rem 0.55rem 1.0rem rgba(0, 0, 0, 0.8) !important;
-}
-
-.card-img-top {
-    height: 15rem;
-    width: 100%;
-}
-
-.card-body {
-    height: 15rem;
-}
-
-.card-title {
-    padding-bottom: 0.8rem !important;
-}
-
-.card:hover {
-    border-radius: 10px;
-    box-shadow: 0.55rem 0.55rem 1.0rem cornflowerblue !important;
 }
 .shadow {
     box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.4) !important;
@@ -188,30 +377,10 @@ bgblend{
     background-color: rgba(255, 255, 255, 0.94);
 }
 
-
-
-#informationalModal {
-    animation: fade-in ease-in-out 1s;
-    transition: ease-in-out 1s
-}
-
 .fadein {
     animation: fade-in ease-in-out 1s;
     transition: ease-in-out 1s
 }
-.shadow {
-    box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.4) !important;
-}
-
-.shadow-no-hover {
-    box-shadow: 0 0.15rem 0.4rem rgba(0, 0, 0, 0.5) !important;
-}
-
-.shadow:hover {
-    box-shadow: 0 0.15rem 0.4rem rgba(0, 0, 0, 0.8) !important;
-}
-
-
 
 .flex-shrink-1 {
     flex-shrink: 1;
@@ -234,10 +403,6 @@ bgblend{
     background-color: #EBEBEB;
 }
 
-.bg-motherboard-dev {
-    background-image: url("../assets/img/publicbackgrounds/bg-motherboard-dev.jpg");
-}
-
 .hover-bg-white:hover {
     background-color: #FFF;
 }
@@ -254,31 +419,6 @@ bgblend{
     border-radius: 0px;
 }
 
-
-
-.btn-update {
-    color: #FFF;
-    background-color: #cfb300;
-    border-color: #cfb300;
-}
-
-    .btn-update:hover {
-        color: #FFF;
-        background-color: #a68f00;
-        border-color: #a68f00;
-    }
-
-.admin-index-thumbnail-image {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.admin-crud-form-thumbnail-image {
-    display: block;
-    width: 50%;
-}
-
 .list-group {
     border-radius: 0px;
 }
@@ -288,10 +428,6 @@ bgblend{
     .md-and-smaller-my-3 {
         margin-top: 1rem !important;
         margin-bottom: 1rem !important;
-    }
-
-    .bg-motherboard-dev {
-        background-image: url("../assets/img/publicbackgrounds/bg-motherboard.jpg");
     }
 
     .md-and-smaller-d-none {
@@ -305,25 +441,49 @@ bgblend{
     }
 }
 
-/*     Admin Area    */
-.admin-area-main {
-    display: flex;
-    flex-wrap: nowrap;
-    height: 100vh;
-    max-height: 100vh;
-    overflow-x: auto;
-    overflow-y: auto;
-    background-color: #404040;
-}
 
-.admin-area-content {
-    overflow-y: scroll;
-    padding: 10vw;
-}
 
 
 
 /*     Animations/Transition/Transforms    */
+@keyframes glowing {
+
+    from {
+        box-shadow: 0 0 1rem -0.6rem #ffffff9f;
+    }
+
+    to {
+        box-shadow: 0 0 1rem 0.6rem #ffffff9f;
+    }
+}
+@keyframes glowing2 {
+
+    from {
+        box-shadow: 0 0 1rem -0.6rem #0e287d;
+    }
+
+    to {
+        box-shadow: 0 0 1rem 0.6rem #0e287d;
+    }
+}
+/*0% {
+    box-shadow: 1rem -0.6rem #ffffff9f;
+}
+
+25% {
+    box-shadow: 1rem 0.6rem #ffffff9f;
+}
+
+50% {
+    box-shadow: -1rem 0.6rem #ffffff9f;
+}
+
+75% {
+    box-shadow: -1rem -0.6rem #ffffff9f;
+}
+
+100% {
+    box-shadow: 1rem -0.6rem #ffffff9f;*/
 
 @keyframes fade-in {
     from {
@@ -335,8 +495,4 @@ bgblend{
     }
 }
 
-.img--size {
-    width: 414px;
-    height: 232px;
-    object-fit: contain;
-}
+
